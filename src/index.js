@@ -5,7 +5,7 @@ import express from "express"
 
 const start = Date.now()
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 4000
 const app = express()
 
 app.use(homepage)
