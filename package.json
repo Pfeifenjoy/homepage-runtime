@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "@arwed/homepage": "git+ssh://git@metthub.de:private/arwed/homepage-2",
+    "babel-preset-es2015": "^6.24.1",
     "express": "^4.15.3"
   }
 }
