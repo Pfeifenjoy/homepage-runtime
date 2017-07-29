@@ -1,11 +1,11 @@
 //@flow
 
-import homepage from "homepage"
+import homepage from "@arwed/homepage"
 import express from "express"
 
 const start = Date.now()
 
-const PORT = 3000
+const PORT = process.env.PORT | 3000
 const app = express()
 
 app.use(homepage)
