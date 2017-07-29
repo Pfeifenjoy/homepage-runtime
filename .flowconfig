@@ -1,0 +1,26 @@
+[include]
+./src/**/*.js
+
+[ignore]
+.*/node_modules/homepage/.*
+.*/homepage/.*
+.*/build/.*
+
+[libs]
+flow-typed
+node_modules/flow-interfaces-chrome/interfaces/
+node_modules/styled-components/flow-typed/react-native.js
+node_modules/styled-components/flow-typed/glamor_vx.x.x.js
+node_modules/styled-components/flow-typed/lodash_v4.x.x.js
+node_modules/styled-components/flow-typed/react-native.js
+node_modules/styled-components/flow-typed/inline-style-prefixer_vx.x.x.js
+
+[options]
+module.name_mapper.extension='html' -> '<PROJECT_ROOT>/flow/stub/file-loader.js'
+module.name_mapper.extension='ejs' -> '<PROJECT_ROOT>/flow/stub/raw-loader.js'
+module.use_strict=true
+munge_underscores=true
+suppress_type=$FlowIssue
+suppress_type=$FlowFixMe
+suppress_type=$FixMe
+unsafe.enable_getters_and_setters=true

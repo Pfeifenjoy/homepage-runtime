@@ -1,0 +1,45 @@
+{
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"impliedStrict": true,
+			"jsx": true
+		}
+	},
+	"env": {
+		"node": true
+	},
+	"plugins": [
+		"inferno",
+		"flowtype"
+	],
+	"extends": [
+		"eslint:recommended",
+		"plugin:inferno/recommended",
+		"plugin:flowtype/recommended"
+	],
+	"rules": {
+		"quotes": ["error", "double"],
+		"curly": ["error", "all"],
+		"eqeqeq": ["error", "always"],
+		"block-scoped-var": "error",
+		"class-methods-use-this": "error",
+		"dot-location": ["error", "object"],
+		"dot-notation": "error",
+		"no-eval": "error",
+		"no-unused-vars": "error",
+		"array-bracket-spacing": ["error", "always"],
+		"block-spacing": "error",
+		"brace-style": "error",
+		"comma-dangle": ["error", "never"],
+		"comma-spacing": ["error", { "before": false, "after": true }],
+		"indent": ["error", "tab"],
+		"no-trailing-spaces": "error",
+		"one-var": ["error", "never"],
+		"semi": ["error", "never"]
+	},
+	"globals": {
+		"document": true
+	}
+}

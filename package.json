@@ -1,0 +1,41 @@
+{
+  "name": "@arwed/homepage-server",
+  "version": "0.0.1",
+  "description": "My Homepage Backend",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "babel-node src --out-dir build --source-maps",
+    "build": "babel src --out-dir build",
+    "test": "npm run lint && npm run flow && npm run mocha",
+    "mocha": "mocha --compilers js:babel-register --timeout 100 --slow 30 --throw-deprecation --use_strict",
+    "clean": "rm -rf build",
+    "flow": "flow",
+    "lint": "eslint src",
+    "prepublish": "in-publish && npm run clean && npm run test && npm run build || not-in-publish"
+  },
+  "author": "Arwed Mett",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-es2016": "^6.22.0",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "eslint": "^3.12.2",
+    "eslint-plugin-flowtype": "^2.30.0",
+    "flow": "^0.2.3",
+    "flow-bin": "^0.37.4",
+    "flow-typed": "^2.0.0",
+    "in-publish": "^2.0.0",
+    "jsdom": "^9.10.0",
+    "babel-polyfill": "^6.23.0",
+    "eslint-plugin-inferno": "^7.0.1",
+    "mocha": "^3.2.0"
+  },
+  "dependencies": {
+    "@arwed/homepage": "git+ssh://git@metthub.de:private/arwed/homepage-2",
+    "express": "^4.15.3"
+  }
+}
