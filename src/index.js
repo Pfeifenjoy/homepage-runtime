@@ -1,24 +1,45 @@
 //@flow
 
+import cluster from "cluster"
+import os from "os"
+
 import homepage from "@arwed/homepage"
 import express from "express"
 
-const start = Date.now()
+if(cluster.isMaster) {
+	console.log(`Master ${process.pid} is running`)
 
-const PORT = process.env.PORT || 4000
-const app = express()
+	for(let i = 0; i < os.cpus().length; ++i) {
+		cluster.fork()
+	}
 
-app.use(homepage)
+	cluster.on('exit', (worker, code, signal) => {
+		console.log(`worker ${worker.process.pid} died`)
+	});
+} else {
+	launch()
 
-app.listen(PORT)
+	console.log(`Worker ${process.pid} started`)
+}
 
-/*eslint-disable */
-console.log(`
-Server launched.
-Listening on Port: ${ PORT }
-`)
+function launch() {
+	const start = Date.now()
 
-console.log(`
-took ${ Date.now() - start } milliseconds.
-`)
-/*eslint-enable */
+	const PORT = process.env.PORT || 4000
+	const app = express()
+
+	app.use(homepage)
+
+	app.listen(PORT)
+
+	/*eslint-disable */
+	console.log(`
+	Server launched.
+	Listening on Port: ${ PORT }
+	`)
+
+	console.log(`
+	took ${ Date.now() - start } milliseconds.
+	`)
+	/*eslint-enable */
+}
