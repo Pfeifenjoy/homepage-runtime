@@ -5,15 +5,16 @@ import os from "os"
 
 import homepage from "@arwed/homepage"
 import express from "express"
+import http2 from "http2"
 
-if(cluster.isMaster) {
+if(cluster.isMaster && process.env === "PRODUCTION") {
 	console.log(`Master ${process.pid} is running`)
 
 	for(let i = 0; i < os.cpus().length; ++i) {
 		cluster.fork()
 	}
 
-	cluster.on('exit', (worker, code, signal) => {
+	cluster.on('exit', (worker: Worker, code: number, signal: string) => {
 		console.log(`worker ${worker.process.pid} died`)
 	});
 } else {
@@ -30,7 +31,8 @@ function launch() {
 
 	app.use(homepage)
 
-	app.listen(PORT)
+	//http2.createServer({ }, app).listen(PORT)
+	app.listen(4000)
 
 	/*eslint-disable */
 	console.log(`

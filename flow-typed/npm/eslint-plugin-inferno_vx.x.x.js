@@ -1,4 +1,4 @@
-// flow-typed signature: 11edef2d68c9da4ebeba256be6ccf336
+// flow-typed signature: bf0df27bce2c05143e79101cb398b1f8
 // flow-typed version: <<STUB>>/eslint-plugin-inferno_v^7.0.1/flow_v0.37.4
 
 /**
@@ -43,6 +43,10 @@ declare module 'eslint-plugin-inferno/lib/rules/jsx-closing-bracket-location' {
 }
 
 declare module 'eslint-plugin-inferno/lib/rules/jsx-closing-tag-location' {
+  declare module.exports: any;
+}
+
+declare module 'eslint-plugin-inferno/lib/rules/jsx-curly-brace-presence' {
   declare module.exports: any;
 }
 
@@ -174,6 +178,10 @@ declare module 'eslint-plugin-inferno/lib/rules/no-multi-comp' {
   declare module.exports: any;
 }
 
+declare module 'eslint-plugin-inferno/lib/rules/no-redundant-should-component-update' {
+  declare module.exports: any;
+}
+
 declare module 'eslint-plugin-inferno/lib/rules/no-render-return-value' {
   declare module.exports: any;
 }
@@ -186,11 +194,19 @@ declare module 'eslint-plugin-inferno/lib/rules/no-string-refs' {
   declare module.exports: any;
 }
 
+declare module 'eslint-plugin-inferno/lib/rules/no-typos' {
+  declare module.exports: any;
+}
+
 declare module 'eslint-plugin-inferno/lib/rules/no-unescaped-entities' {
   declare module.exports: any;
 }
 
 declare module 'eslint-plugin-inferno/lib/rules/no-unknown-property' {
+  declare module.exports: any;
+}
+
+declare module 'eslint-plugin-inferno/lib/rules/no-unused-state' {
   declare module.exports: any;
 }
 
@@ -254,10 +270,6 @@ declare module 'eslint-plugin-inferno/lib/util/variable' {
   declare module.exports: any;
 }
 
-declare module 'eslint-plugin-inferno/lib/util/version' {
-  declare module.exports: any;
-}
-
 // Filename aliases
 declare module 'eslint-plugin-inferno/index' {
   declare module.exports: $Exports<'eslint-plugin-inferno'>;
@@ -282,6 +294,9 @@ declare module 'eslint-plugin-inferno/lib/rules/jsx-closing-bracket-location.js'
 }
 declare module 'eslint-plugin-inferno/lib/rules/jsx-closing-tag-location.js' {
   declare module.exports: $Exports<'eslint-plugin-inferno/lib/rules/jsx-closing-tag-location'>;
+}
+declare module 'eslint-plugin-inferno/lib/rules/jsx-curly-brace-presence.js' {
+  declare module.exports: $Exports<'eslint-plugin-inferno/lib/rules/jsx-curly-brace-presence'>;
 }
 declare module 'eslint-plugin-inferno/lib/rules/jsx-curly-spacing.js' {
   declare module.exports: $Exports<'eslint-plugin-inferno/lib/rules/jsx-curly-spacing'>;
@@ -379,6 +394,9 @@ declare module 'eslint-plugin-inferno/lib/rules/no-is-mounted.js' {
 declare module 'eslint-plugin-inferno/lib/rules/no-multi-comp.js' {
   declare module.exports: $Exports<'eslint-plugin-inferno/lib/rules/no-multi-comp'>;
 }
+declare module 'eslint-plugin-inferno/lib/rules/no-redundant-should-component-update.js' {
+  declare module.exports: $Exports<'eslint-plugin-inferno/lib/rules/no-redundant-should-component-update'>;
+}
 declare module 'eslint-plugin-inferno/lib/rules/no-render-return-value.js' {
   declare module.exports: $Exports<'eslint-plugin-inferno/lib/rules/no-render-return-value'>;
 }
@@ -388,11 +406,17 @@ declare module 'eslint-plugin-inferno/lib/rules/no-set-state.js' {
 declare module 'eslint-plugin-inferno/lib/rules/no-string-refs.js' {
   declare module.exports: $Exports<'eslint-plugin-inferno/lib/rules/no-string-refs'>;
 }
+declare module 'eslint-plugin-inferno/lib/rules/no-typos.js' {
+  declare module.exports: $Exports<'eslint-plugin-inferno/lib/rules/no-typos'>;
+}
 declare module 'eslint-plugin-inferno/lib/rules/no-unescaped-entities.js' {
   declare module.exports: $Exports<'eslint-plugin-inferno/lib/rules/no-unescaped-entities'>;
 }
 declare module 'eslint-plugin-inferno/lib/rules/no-unknown-property.js' {
   declare module.exports: $Exports<'eslint-plugin-inferno/lib/rules/no-unknown-property'>;
+}
+declare module 'eslint-plugin-inferno/lib/rules/no-unused-state.js' {
+  declare module.exports: $Exports<'eslint-plugin-inferno/lib/rules/no-unused-state'>;
 }
 declare module 'eslint-plugin-inferno/lib/rules/no-will-update-set-state.js' {
   declare module.exports: $Exports<'eslint-plugin-inferno/lib/rules/no-will-update-set-state'>;
@@ -438,7 +462,4 @@ declare module 'eslint-plugin-inferno/lib/util/pragma.js' {
 }
 declare module 'eslint-plugin-inferno/lib/util/variable.js' {
   declare module.exports: $Exports<'eslint-plugin-inferno/lib/util/variable'>;
-}
-declare module 'eslint-plugin-inferno/lib/util/version.js' {
-  declare module.exports: $Exports<'eslint-plugin-inferno/lib/util/version'>;
 }

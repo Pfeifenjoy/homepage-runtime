@@ -1,4 +1,4 @@
-// flow-typed signature: df86dcd6e68229d6e26372e84df986f7
+// flow-typed signature: ea2081bff5245b116176cede34401975
 // flow-typed version: <<STUB>>/eslint-plugin-flowtype_v^2.30.0/flow_v0.37.4
 
 /**
@@ -50,6 +50,14 @@ declare module 'eslint-plugin-flowtype/dist/rules/noDupeKeys' {
   declare module.exports: any;
 }
 
+declare module 'eslint-plugin-flowtype/dist/rules/noFlowFixMeComments' {
+  declare module.exports: any;
+}
+
+declare module 'eslint-plugin-flowtype/dist/rules/noMutableArray' {
+  declare module.exports: any;
+}
+
 declare module 'eslint-plugin-flowtype/dist/rules/noPrimitiveConstructorTypes' {
   declare module.exports: any;
 }
@@ -58,11 +66,19 @@ declare module 'eslint-plugin-flowtype/dist/rules/noTypesMissingFileAnnotation' 
   declare module.exports: any;
 }
 
+declare module 'eslint-plugin-flowtype/dist/rules/noUnusedExpressions' {
+  declare module.exports: any;
+}
+
 declare module 'eslint-plugin-flowtype/dist/rules/noWeakTypes' {
   declare module.exports: any;
 }
 
 declare module 'eslint-plugin-flowtype/dist/rules/objectTypeDelimiter' {
+  declare module.exports: any;
+}
+
+declare module 'eslint-plugin-flowtype/dist/rules/requireExactType' {
   declare module.exports: any;
 }
 
@@ -216,17 +232,29 @@ declare module 'eslint-plugin-flowtype/dist/rules/genericSpacing.js' {
 declare module 'eslint-plugin-flowtype/dist/rules/noDupeKeys.js' {
   declare module.exports: $Exports<'eslint-plugin-flowtype/dist/rules/noDupeKeys'>;
 }
+declare module 'eslint-plugin-flowtype/dist/rules/noFlowFixMeComments.js' {
+  declare module.exports: $Exports<'eslint-plugin-flowtype/dist/rules/noFlowFixMeComments'>;
+}
+declare module 'eslint-plugin-flowtype/dist/rules/noMutableArray.js' {
+  declare module.exports: $Exports<'eslint-plugin-flowtype/dist/rules/noMutableArray'>;
+}
 declare module 'eslint-plugin-flowtype/dist/rules/noPrimitiveConstructorTypes.js' {
   declare module.exports: $Exports<'eslint-plugin-flowtype/dist/rules/noPrimitiveConstructorTypes'>;
 }
 declare module 'eslint-plugin-flowtype/dist/rules/noTypesMissingFileAnnotation.js' {
   declare module.exports: $Exports<'eslint-plugin-flowtype/dist/rules/noTypesMissingFileAnnotation'>;
 }
+declare module 'eslint-plugin-flowtype/dist/rules/noUnusedExpressions.js' {
+  declare module.exports: $Exports<'eslint-plugin-flowtype/dist/rules/noUnusedExpressions'>;
+}
 declare module 'eslint-plugin-flowtype/dist/rules/noWeakTypes.js' {
   declare module.exports: $Exports<'eslint-plugin-flowtype/dist/rules/noWeakTypes'>;
 }
 declare module 'eslint-plugin-flowtype/dist/rules/objectTypeDelimiter.js' {
   declare module.exports: $Exports<'eslint-plugin-flowtype/dist/rules/objectTypeDelimiter'>;
+}
+declare module 'eslint-plugin-flowtype/dist/rules/requireExactType.js' {
+  declare module.exports: $Exports<'eslint-plugin-flowtype/dist/rules/requireExactType'>;
 }
 declare module 'eslint-plugin-flowtype/dist/rules/requireParameterType.js' {
   declare module.exports: $Exports<'eslint-plugin-flowtype/dist/rules/requireParameterType'>;
