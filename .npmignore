@@ -5,7 +5,9 @@ test
 .babelrc
 .editorconfig
 .eslintrc.json
+.dockerignore
 .flowconfig
 .tern-port
 .gitignore
 webpack.config.js
+Dockerfile
