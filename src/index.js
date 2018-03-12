@@ -3,7 +3,7 @@
 import cluster from "cluster"
 import os from "os"
 
-import homepage from "@arwed/homepage"
+import frontend from "@arwed/homepage-frontend"
 import express from "express"
 import http2 from "http2"
 
@@ -29,7 +29,7 @@ function launch() {
 	const PORT = process.env.PORT || 4000
 	const app = express()
 
-	app.use(homepage)
+	app.use(frontend)
 
 	//http2.createServer({ }, app).listen(PORT)
 	app.listen(4000)
