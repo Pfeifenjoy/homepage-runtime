@@ -1,6 +1,6 @@
 {
   "name": "@arwed/homepage-server",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "My Homepage Backend",
   "main": "build/index.js",
   "scripts": {
