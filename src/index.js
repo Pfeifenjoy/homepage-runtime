@@ -5,7 +5,6 @@ import os from "os"
 
 import frontend from "@arwed/homepage-frontend"
 import express from "express"
-import http2 from "http2"
 
 if(cluster.isMaster && process.env === "PRODUCTION") {
 	console.log(`Master ${process.pid} is running`)
@@ -31,7 +30,6 @@ function launch() {
 
 	app.use(frontend)
 
-	//http2.createServer({ }, app).listen(PORT)
 	app.listen(4000)
 
 	/*eslint-disable */
