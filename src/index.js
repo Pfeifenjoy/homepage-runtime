@@ -5,6 +5,7 @@ import os from "os"
 
 import frontend from "@arwed/homepage-frontend"
 import express from "express"
+import compression from "compression"
 
 if(cluster.isMaster && process.env === "PRODUCTION") {
 	console.log(`Master ${process.pid} is running`)
@@ -28,6 +29,7 @@ function launch() {
 	const PORT = process.env.PORT || 4000
 	const app = express()
 
+	app.use(compression())
 	app.use(frontend)
 
 	app.listen(4000)
