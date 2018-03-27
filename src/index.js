@@ -6,6 +6,8 @@ import os from "os"
 import frontend from "@arwed/homepage-frontend"
 import express from "express"
 import compression from "compression"
+import xss_filter from "x-xss-protection"
+import x_frame_options from "x-frame-options"
 
 if(cluster.isMaster && process.env === "PRODUCTION") {
 	console.log(`Master ${process.pid} is running`)
@@ -30,6 +32,8 @@ function launch() {
 	const app = express()
 
 	app.use(compression())
+	app.use(xss_filter())
+	app.use(x_frame_options())
 	app.use(frontend)
 
 	app.listen(4000)
